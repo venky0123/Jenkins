@@ -1,0 +1,25 @@
+## ## Backend base docker ####
+
+FROM : nginx : latest
+
+WORKDIR : usr/share/ apps
+
+RUN : yum install python 3.8
+
+COPY : requirements.txt
+
+COPY : Profeesor/Dev
+
+RUN : pip install -- r requirements.txt
+
+CMD ["python", "professor/Dev"]
+
+#### Frontend Base docker ######
+RUN : yum install node v12.18.2
+
+RUN : yum install npm 7.8.0
+
+RUN : install package.json
+
+CMD [" npm 7.8.0 "]
+
